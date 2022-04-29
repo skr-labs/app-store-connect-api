@@ -1,0 +1,27 @@
+{
+    "name": "@skr-labs/app-store-connect-api",
+    "version": "1.0.0",
+    "description": "A NodeJS SDK for interacting with the Apple App Store Connect REST API",
+    "main": "index.js",
+    "scripts": {
+        "get-spec": "wget https://developer.apple.com/sample-code/app-store-connect/app-store-connect-openapi-specification.zip -o spec.zip",
+        "generate": "TS_POST_PROCESS_FILE=\"./node_modules/.bin/prettier --write\" openapi-generator-cli generate -i app_store_connect_api_1.8_openapi.json -g typescript-node -o generated --enable-post-process-file --additional-properties=npmName=@skr-labs/app-store-connect-api",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/skr-labs/app-store-connect-api.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/skr-labs/app-store-connect-api/issues"
+    },
+    "homepage": "https://github.com/skr-labs/app-store-connect-api#readme",
+    "devDependencies": {
+        "@openapitools/openapi-generator-cli": "^2.5.1",
+        "@types/node": "^17.0.30",
+        "prettier": "^2.6.2"
+    }
+}
